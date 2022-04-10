@@ -118,7 +118,16 @@ Pair * searchMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) 
 {
+  long aux;
 
+  for(aux = 0 ; aux < map->capacity; aux++)
+  {
+    if(map->buckets[aux] != NULL)
+    {
+      return map->buckets[aux];
+    }
+  }
+  
   return NULL;
 }
 
