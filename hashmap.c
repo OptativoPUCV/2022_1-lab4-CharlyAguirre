@@ -126,13 +126,13 @@ Pair * searchMap(HashMap * map,  char * key)
   {
     while(cont < map->capacity)
     {
-      if(is_equal(map->buckets[auxKey]->key,key) == 1 )
-      {
-        return map->buckets[auxKey];
-      }
       if(map->buckets[auxKey] == NULL)
       {
         return NULL;
+      }
+      if(is_equal(map->buckets[auxKey]->key,key) == 1 )
+      {
+        return map->buckets[auxKey];
       }
       
       auxKey++;
@@ -142,7 +142,7 @@ Pair * searchMap(HashMap * map,  char * key)
       }
       cont++;
     }
-    
+  
     return NULL;
   }
 }
