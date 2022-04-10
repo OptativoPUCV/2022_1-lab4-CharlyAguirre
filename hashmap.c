@@ -123,13 +123,12 @@ Pair * searchMap(HashMap * map,  char * key)
   }
   else
   {
-    while(is_equal(map->buckets[auxKey]->key,key)==0)
+    while(strcmp(map->buckets[auxKey]->key,key)==0)
     {
       if(map->buckets[auxKey] == NULL)
       {
         return NULL;
       }
-
       
       auxKey++;
       if(auxKey >= map->capacity)
