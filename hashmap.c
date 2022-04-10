@@ -123,7 +123,7 @@ Pair * searchMap(HashMap * map,  char * key)
   }
   else
   {
-    while(strcmp(map->buckets[auxKey]->key,key)==0)
+    while(strcmp(map->buckets[auxKey]->key,key) == 1)
     {
       if(map->buckets[auxKey] == NULL)
       {
