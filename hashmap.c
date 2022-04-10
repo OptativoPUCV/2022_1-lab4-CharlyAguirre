@@ -124,8 +124,12 @@ Pair * searchMap(HashMap * map,  char * key)
   }
   else
   {
-    while(is_equal(map->buckets[auxKey]->key,key) != 1 || cont < map->capacity)
+    while(cont < map->capacity)
     {
+      if(is_equal(map->buckets[auxKey]->key,key) == 1 )
+      {
+        return map->buckets[auxKey];
+      }
       if(map->buckets[auxKey] == NULL)
       {
         return NULL;
@@ -138,11 +142,8 @@ Pair * searchMap(HashMap * map,  char * key)
       }
       cont++;
     }
-    if(cont >= map->capacity)
-    {
-      return NULL;
-    }
-    return map->buckets[auxKey];
+    
+    return NULL;
   }
 }
 
