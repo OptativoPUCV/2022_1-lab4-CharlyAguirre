@@ -103,3 +103,15 @@ Sun Apr 10 18:18:56 UTC 2022:
  tests:  7|4
 total_score: 30/70
 79be07c
+Sun Apr 10 18:20:32 UTC 2022: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:126:43: error: ‘cont’ undeclared (first use in this function); did you mean ‘cosl’?
+     while(map->buckets[auxKey] != NULL || cont >= map->capacity)
+                                           ^~~~
+                                           cosl
+hashmap.c:126:43: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+761693b

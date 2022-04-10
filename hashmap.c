@@ -123,7 +123,19 @@ Pair * searchMap(HashMap * map,  char * key)
   }
   else
   {
-    
+    while(map->buckets[auxKey] != NULL || cont >= map->capacity)
+      {
+        auxKey++;
+        cont++;
+        if(auxKey >= map->capacity)
+        {
+          auxKey = 0;
+        }
+      }
+      if(cont < map->capacity)
+      {
+        return map->buckets[auxKey];
+      }
   }
 
   return NULL;
