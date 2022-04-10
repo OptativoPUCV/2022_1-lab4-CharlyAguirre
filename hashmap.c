@@ -124,6 +124,7 @@ Pair * firstMap(HashMap * map)
   {
     if(map->buckets[aux] != NULL)
     {
+      map->current = aux;
       return map->buckets[aux];
     }
   }
