@@ -123,21 +123,22 @@ Pair * searchMap(HashMap * map,  char * key)
   }
   else
   {
-    auxKey++;
-    if(auxKey >= map->capacity)
+    while(is_equal(map->buckets[auxKey]->key,key)==0)
     {
-      auxKey = 0;
-    }
-    if(map->buckets[auxKey] == NULL)
-    {
-      return NULL;
-    }
-    else
-    {
-      return map->buckets[auxKey];
-    }
-  }
+      if(map->buckets[auxKey] == NULL)
+      {
+        return NULL;
+      }
 
+      
+      auxKey++;
+      if(auxKey >= map->capacity)
+      {
+        auxKey = 0;
+      }
+    }
+    return map->buckets[auxKey];
+  }
 }
 
 Pair * firstMap(HashMap * map) 
