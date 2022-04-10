@@ -125,23 +125,20 @@ Pair * searchMap(HashMap * map,  char * key)
   else
   {
     auxKey++;
-    if(auxKey >= map->capacity) auxKey = 0;
-    while(map->buckets[auxKey] == NULL || cont >= map->capacity)
+    if(auxKey >= map->capacity)
     {
-      auxKey++;
-      cont++;
-      if(auxKey >= map->capacity)
-      {
-        auxKey = 0;
-      }
+      auxKey = 0;
     }
-    if(cont < map->capacity)
+    if(map->buckets[auxKey] == NULL)
+    {
+      return NULL;
+    }
+    else
     {
       return map->buckets[auxKey];
     }
   }
 
-  return NULL;
 }
 
 Pair * firstMap(HashMap * map) 

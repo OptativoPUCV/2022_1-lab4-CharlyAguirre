@@ -139,3 +139,14 @@ Sun Apr 10 18:25:58 UTC 2022:
  tests:  7|4
 total_score: 30/70
 6568ec5
+Sun Apr 10 18:33:54 UTC 2022: 
+ hashmap.c | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:119:8: error: unused variable ‘cont’ [-Werror=unused-variable]
+   long cont = 0;
+        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+356f472
