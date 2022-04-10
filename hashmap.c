@@ -75,7 +75,7 @@ void enlarge(HashMap * map)
 {
   enlarge_called = 1; //no borrar (testing purposes)
 
-  long cont;
+  /*long cont;
   Pair ** auxBuckets = (Pair **) calloc(map->capacity, sizeof(Pair*));
   if(map != NULL && map->capacity != 0)
   {
@@ -98,8 +98,7 @@ void enlarge(HashMap * map)
         map->buckets[cont] = NULL;
       }
     }  
-  }
-  
+  }*/
 }
 
 
@@ -153,7 +152,6 @@ Pair * searchMap(HashMap * map,  char * key)
       }
       cont++;
     }
-  
     return NULL;
   }
 }
@@ -164,7 +162,7 @@ Pair * firstMap(HashMap * map)
 
   for(aux = 0 ; aux < map->capacity; aux++)
   {
-    if(map->buckets[aux] != NULL && map->buckets[aux]->value != NULL)
+    if(map->buckets[aux] != NULL)
     {
       map->current = aux;
       return map->buckets[aux];
