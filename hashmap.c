@@ -81,7 +81,14 @@ void enlarge(HashMap * map)
   {
     for(cont = 0 ; cont < map->capacity ; cont++)
     {
+      if(map->buckets[cont]->key == NULL)
+      {
+        auxBuckets[cont] = NULL;
+      }
+      else
+      {
       auxBuckets[cont] = map->buckets[cont];
+      }
     }
 
     map->capacity *= 2;
@@ -89,7 +96,7 @@ void enlarge(HashMap * map)
 
     for(cont = 0 ; cont < map->capacity ; cont++)
     {
-      if(auxBuckets[cont] != NULL && auxBuckets[cont]->key != NULL)
+      if(auxBuckets[cont] != NULL)
       {
         insertMap(map,auxBuckets[cont]->key, auxBuckets[cont]->value);
       }
