@@ -215,12 +215,17 @@ Pair * nextMap(HashMap * map)
   {
     for(cont = 0 ; cont < map->capacity; cont++)
     {
+      if(map->buckets[aux] == NULL)
+      {
+        return NULL;
+      }
+      
       if(aux >= map->capacity)
       {
         aux = 0;
       }
     
-      if(map->buckets[aux] != NULL && map->buckets[aux]->key != NULL)
+      if(map->buckets[aux] == NULL && map->buckets[aux]->key != NULL)
       {
         map->current = aux;
         return map->buckets[aux];
