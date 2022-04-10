@@ -116,6 +116,7 @@ void eraseMap(HashMap * map,  char * key)
 Pair * searchMap(HashMap * map,  char * key) 
 {   
   long auxKey = hash(key,map->capacity);
+  long cont = 0;
   if(is_equal(map->buckets[auxKey]->key,key) == 1)
   {
     map->current = auxKey;
