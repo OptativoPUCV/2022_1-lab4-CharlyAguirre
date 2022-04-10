@@ -181,7 +181,7 @@ Pair * nextMap(HashMap * map)
   long cont;
   for(cont = 0 ; cont < map->capacity; cont++)
   {
-    if(aux == map->capacity)
+    if(aux >= map->capacity)
     {
       aux = 0;
     }
