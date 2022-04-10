@@ -125,6 +125,7 @@ Pair * searchMap(HashMap * map,  char * key)
   else
   {
     auxKey++;
+    if(auxKey >= map->capacity) auxKey = 0;
     while(map->buckets[auxKey] == NULL || cont >= map->capacity)
     {
       auxKey++;
