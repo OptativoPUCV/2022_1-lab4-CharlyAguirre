@@ -97,3 +97,9 @@ Sun Apr 10 18:18:25 UTC 2022:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 3dffa32
+Sun Apr 10 18:18:56 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  7|4
+total_score: 30/70
+79be07c
