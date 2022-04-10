@@ -282,3 +282,8 @@ Sun Apr 10 20:53:22 UTC 2022:
  tests:  12|3
 total_score: 40/70
 520bdba
+Sun Apr 10 20:58:16 UTC 2022: 
+ hashmap.c | 29 +++++++++++++++++++++++++++--
+ 1 file changed, 27 insertions(+), 2 deletions(-)
+ tests:  0|0
+d9c2649

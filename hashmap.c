@@ -125,9 +125,34 @@ HashMap *createMap(long capacity)
 }
 
 void eraseMap(HashMap * map,  char * key) 
-{    
-
-
+{
+  long auxKey = hash(key, map->capacity);
+  long cont = 0;
+  if(map != NULL)
+  {
+    if(map->buckets[auxKey] != NULL && is_equal(map->buckets[auxKey]->key,key) == 1)
+    {
+      map->buckets[auxKey]->key = NULL;
+      map->size--;
+    }
+    else
+    {
+      while(map->buckets[auxKey] != NULL || cont >= map->capacity)
+      {
+        auxKey++;
+        cont++;
+        if(auxKey >= map->capacity)
+        {
+          auxKey = 0;
+        }
+      }
+      if(cont < map->capacity && is_equal(map->buckets[auxKey]->key,key) == 1)
+      {
+        map->buckets[auxKey]= NULL;
+        map->size--;
+      }
+    }
+  }
 }
 
 Pair * searchMap(HashMap * map,  char * key) 
