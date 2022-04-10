@@ -87,7 +87,7 @@ void enlarge(HashMap * map)
   
   for(cont = 0 ; cont < map->capacity ; cont++)
   {
-    insertMap(map,auxBuckets[cont]->key, auxBuckets[cont]->value);
+    //insertMap(map,auxBuckets[cont]->key, auxBuckets[cont]->value);
   }
 }
 
