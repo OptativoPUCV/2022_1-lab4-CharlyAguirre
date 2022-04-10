@@ -185,19 +185,24 @@ Pair * nextMap(HashMap * map)
 {
   long aux = map->current + 1;
   long cont;
-  for(cont = 0 ; cont < map->capacity; cont++)
+
+  if(map != NULL)
   {
-    if(aux >= map->capacity)
+    for(cont = 0 ; cont < map->capacity; cont++)
     {
-      aux = 0;
-    }
+      if(aux >= map->capacity)
+      {
+        aux = 0;
+      }
     
-    if(map->buckets[aux] != NULL && map->buckets[aux]->key != NULL)
-    {
-      map->current = aux;
-      return map->buckets[aux];
+      if(map->buckets[aux] != NULL && map->buckets[aux]->key != NULL)
+      {
+        map->current = aux;
+        return map->buckets[aux];
+      }
+      aux++;
     }
-    aux++;
+    return NULL;
   }
   return NULL;
 }
