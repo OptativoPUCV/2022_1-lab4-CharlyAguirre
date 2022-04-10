@@ -160,12 +160,15 @@ Pair * firstMap(HashMap * map)
 {
   long aux;
 
-  for(aux = 0 ; aux < map->capacity; aux++)
+  if(map != NULL)
   {
-    if(map->buckets[aux] != NULL)
+    for(aux = 0 ; aux < map->capacity; aux++)
     {
-      map->current = aux;
-      return map->buckets[aux];
+      if(map->buckets[aux] != NULL)
+      {
+        map->current = aux;
+        return map->buckets[aux];
+      }
     }
   }
 
