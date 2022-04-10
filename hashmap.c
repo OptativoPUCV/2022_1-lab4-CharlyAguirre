@@ -146,7 +146,7 @@ void eraseMap(HashMap * map,  char * key)
           auxKey = 0;
         }
       }
-      if(cont < map->capacity && is_equal(map->buckets[auxKey]->key,key) == 1)
+      if(cont < map->capacity)
       {
         map->buckets[auxKey]= NULL;
         map->size--;
