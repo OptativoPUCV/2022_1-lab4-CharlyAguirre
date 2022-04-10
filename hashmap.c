@@ -128,12 +128,27 @@ Pair * firstMap(HashMap * map)
       return map->buckets[aux];
     }
   }
-  
+
   return NULL;
 }
 
 Pair * nextMap(HashMap * map) 
 {
-
+  long aux = map->current + 1;
+  long cont;
+  for(cont = 0 ; cont < map->capacity; cont++)
+  {
+    if(aux == map->capacity)
+    {
+      aux = 0;
+    }
+    
+    if(map->buckets[aux] != NULL)
+    {
+      map->current = aux;
+      return map->buckets[aux];
+    }
+    aux++;
+  }
   return NULL;
 }
