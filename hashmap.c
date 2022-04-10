@@ -105,6 +105,7 @@ Pair * searchMap(HashMap * map,  char * key)
   long auxKey = hash(key,map->capacity);
   if(is_equal(map->buckets[auxKey]->key,key) == 1)
   {
+    map->current = auxKey;
     return map->buckets[auxKey];
   }
   else
