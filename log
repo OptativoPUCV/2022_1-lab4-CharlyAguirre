@@ -150,3 +150,9 @@ hashmap.c:119:8: error: unused variable ‘cont’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 356f472
+Sun Apr 10 18:34:01 UTC 2022: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  7|4
+total_score: 30/70
+9b790e0
