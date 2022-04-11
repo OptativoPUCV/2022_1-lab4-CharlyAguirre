@@ -149,11 +149,11 @@ void eraseMap(HashMap * map,  char * key)
           map->size--;
           break;
         }
+        auxKey++;
         if(auxKey >= map->capacity)
         {
           auxKey = 0;
         }
-        auxKey++;
         cont++;
       }
     }
@@ -181,7 +181,6 @@ Pair * searchMap(HashMap * map,  char * key)
       {
         return map->buckets[auxKey];
       }
-      
       auxKey++;
       if(auxKey >= map->capacity)
       {
