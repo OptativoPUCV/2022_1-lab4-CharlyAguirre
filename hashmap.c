@@ -212,7 +212,7 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
-  long aux = map->current + 1;
+  long aux = map->current;
   long cont;
 
   if(map != NULL)
@@ -243,6 +243,12 @@ Pair * nextMap(HashMap * map)
     {
       while(cont < map->capacity)
       {
+        aux++;
+        if(aux >= map->capacity)
+        {
+          aux = 0;
+        }
+        
         if(map->buckets[aux] == NULL)
         {
           return NULL;
@@ -251,11 +257,6 @@ Pair * nextMap(HashMap * map)
         {
           map->current = aux;
           return map->buckets[aux];
-        }
-        aux++;
-        if(aux >= map->capacity)
-        {
-          aux = 0;
         }
         cont++;
       }
