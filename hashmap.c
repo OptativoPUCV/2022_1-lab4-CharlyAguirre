@@ -228,11 +228,11 @@ Pair * nextMap(HashMap * map)
         map->current = aux;
         return map->buckets[aux];
       }
+      aux++;
       if(aux >= map->capacity)
       {
         aux = 0;
       }
-      aux++;
     }
     return NULL;
   }
