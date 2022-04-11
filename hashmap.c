@@ -81,13 +81,13 @@ void enlarge(HashMap * map)
   {
     for(cont = 0 ; cont < map->capacity ; cont++)
     {
-      if(map->buckets[cont]->key == NULL)
+      if(map->buckets[cont] == NULL)
       {
         auxBuckets[cont] = NULL;
       }
       else
       {
-      auxBuckets[cont] = map->buckets[cont];
+        auxBuckets[cont] = map->buckets[cont];
       }
     }
 
