@@ -227,7 +227,7 @@ Pair * nextMap(HashMap * map)
       aux++;
       if(aux >= map->capacity)
       {
-        aux = 0;
+        return NULL;
       }
     }
   }
