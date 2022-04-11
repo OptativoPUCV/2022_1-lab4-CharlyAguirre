@@ -215,7 +215,7 @@ Pair * nextMap(HashMap * map)
   long aux = map->current + 1;
   long cont;
 
-  if(map != NULL && map->size > 0)
+  if(map != NULL && map->size > 1)
   {
     for(cont = 0 ; cont < map->capacity; cont++)
     {
