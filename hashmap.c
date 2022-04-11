@@ -212,18 +212,18 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
-  long aux = map->current - 1;
+  long aux = map->current + 1;
   long cont;
 
   if(map != NULL)
   {
     for(cont = 0 ; cont < map->capacity; cont++)
     {
-      if(map->buckets[aux] == NULL ||  map->buckets[aux]->key == NULL)
+      if(map->buckets[aux] == NULL)
       {
         return NULL;
       }
-      if(map->buckets[aux]->key != NULL && map->buckets[aux]->value != NULL)
+      if(map->buckets[aux]->value != NULL)
       {
         map->current = aux;
         return map->buckets[aux];
