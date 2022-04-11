@@ -81,7 +81,7 @@ void enlarge(HashMap * map)
   {
     for(cont = 0 ; cont < map->capacity ; cont++)
     {
-      if(map->buckets[cont] == NULL)
+      if(map->buckets[cont] == NULL || map->buckets[cont]->key == NULL)
       {
         auxBuckets[cont] = NULL;
       }
