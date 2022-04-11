@@ -230,33 +230,6 @@ Pair * nextMap(HashMap * map)
         aux = 0;
       }
     }
-    return NULL;
-    /*if(map->current == -1)
-    {
-      return firstMap(map);
-    }
-    else
-    {
-      while(cont < map->capacity)
-      {
-        aux++;
-        if(aux >= map->capacity)
-        {
-          aux = 0;
-        }
-        
-        if(map->buckets[aux] == NULL)
-        {
-          return NULL;
-        }
-        if(map->buckets[aux]->key != NULL)
-        {
-          map->current = aux;
-          return map->buckets[aux];
-        }
-        cont++;
-      }
-    }*/
   }
   return NULL;
 }
