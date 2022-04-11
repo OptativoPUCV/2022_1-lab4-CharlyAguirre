@@ -219,7 +219,7 @@ Pair * nextMap(HashMap * map)
   {
     for(cont = 0 ; cont < map->capacity; cont++)
     {
-      if(map->buckets[aux] == NULL)
+      if(map->buckets[aux] == NULL ||  map->buckets[aux]->key == NULL)
       {
         return NULL;
       }
