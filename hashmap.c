@@ -221,7 +221,7 @@ Pair * nextMap(HashMap * map)
       }
       if(map->buckets[aux]->key != NULL )
       {
-        map->current = 
+        map->current = aux;
         return map->buckets[aux];
       }
       
