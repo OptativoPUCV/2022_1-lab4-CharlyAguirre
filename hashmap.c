@@ -139,7 +139,7 @@ void eraseMap(HashMap * map,  char * key)
     {
       while(cont < map->capacity)
       {
-        if(map->buckets[auxKey] == NULL)
+        if(map->buckets[auxKey] == NULL || map->buckets[auxKey]->key == NULL)
         {
           break;
         }
