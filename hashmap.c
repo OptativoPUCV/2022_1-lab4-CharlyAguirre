@@ -212,7 +212,7 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
-  long aux = map->current;
+  long aux = map->current - 1;
   long cont;
 
   if(map != NULL)
