@@ -305,3 +305,13 @@ Sun Apr 10 21:31:50 UTC 2022:
  tests:  11|3
 total_score: 40/70
 5a3d9cf
+Mon Apr 11 01:26:03 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:225:9: error: expected expression before ‘return’
+         return map->buckets[aux];
+         ^~~~~~
+Compilation failed
+f829452
