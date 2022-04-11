@@ -235,23 +235,30 @@ Pair * nextMap(HashMap * map)
       }
     }
     return NULL;*/
-    while(cont < map->capacity)
+    if(map->current == -1)
     {
-      if(map->buckets[aux] == NULL)
+      return firstMap(map);
+    }
+    else
+    {
+      while(cont < map->capacity)
       {
-        return NULL;
+        if(map->buckets[aux] == NULL)
+        {
+          return NULL;
+        }
+        if(map->buckets[aux]->key != NULL)
+        {
+          map->current = aux;
+          return map->buckets[aux];
+        }
+        aux++;
+        if(aux >= map->capacity)
+        {
+          aux = 0;
+        }
+        cont++;
       }
-      if(map->buckets[aux]->key != NULL)
-      {
-        map->current = aux;
-        return map->buckets[aux];
-      }
-      aux++;
-      if(aux >= map->capacity)
-      {
-        aux = 0;
-      }
-      cont++;
     }
   }
   return NULL;
