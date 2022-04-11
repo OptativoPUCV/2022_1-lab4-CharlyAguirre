@@ -98,7 +98,7 @@ void enlarge(HashMap * map)
     {
       if(auxBuckets[cont] != NULL)
       {
-        insertMap(map,auxBuckets[cont]->key, auxBuckets[cont]->value);
+        insertMap(map,auxBuckets[cont]->key,auxBuckets[cont]->value);
       }
       else
       {
@@ -223,7 +223,7 @@ Pair * nextMap(HashMap * map)
       {
         return NULL;
       }
-      if(map->buckets[aux]->value != NULL)
+      if(map->buckets[aux]->key != NULL && map->buckets[aux]->value != NULL)
       {
         map->current = aux;
         return map->buckets[aux];
