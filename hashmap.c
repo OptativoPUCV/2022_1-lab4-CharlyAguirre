@@ -75,7 +75,7 @@ void enlarge(HashMap * map)
 {
   enlarge_called = 1; //no borrar (testing purposes)
 
-  long cont;
+  /*long cont;
   Pair ** auxBuckets = (Pair **) calloc(map->capacity, sizeof(Pair*));
   if(map != NULL && map->capacity != 0)
   {
@@ -105,7 +105,7 @@ void enlarge(HashMap * map)
         insertMap(map,auxBuckets[cont]->key,auxBuckets[cont]->value);
       }
     }  
-  }
+  }*/
 }
 
 
