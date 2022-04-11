@@ -230,6 +230,7 @@ Pair * nextMap(HashMap * map)
         aux = 0;
       }
     }
+    return NULL;
   }
   return NULL;
 }
